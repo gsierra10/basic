@@ -12,10 +12,12 @@ export const APIConsumer = {
             })
             result = await result.json()
             localStorage.setItem('token', result.data) 
-            store.dispatch({
-                type: LOG_IN,
-                payload: result.data
-            }) 
+            if (!result.mensaje) {
+                store.dispatch({
+                    type: LOG_IN,
+                    payload: result.data
+                }) 
+            }
         } catch(data){
             console.log(data)
         }
