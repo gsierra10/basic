@@ -1,4 +1,4 @@
-import { ADD_SHOE } from "../actions"
+import { ADD_SHOE } from "../actions/actionTypes"
 
 const inititalState = {
     shoeCart: []
@@ -7,9 +7,10 @@ const inititalState = {
 export const shoesReducer = (state = inititalState, action) => {
     switch(action.type){
         case ADD_SHOE:
+            console.log(action.payload)
             return {
                 ...state,
-                shoeCart: state.shoeCart.concat(action.payload)
+                shoeCart: state.shoeCart.concat(action.payload) 
             } 
         default:
             return state

@@ -1,5 +1,5 @@
 import store from "../services/store"
-import { LOG_IN } from "../services/actions"
+import { LOG_IN } from "./actions/actionTypes"
 
 export const APIConsumer = {
 

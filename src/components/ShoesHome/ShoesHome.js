@@ -17,15 +17,18 @@ const ShoesHome = () => {
             payload: shoe
         }
     }
-    const ShoeAdd = (shoe) => {
-        store.dispatch(addShoe(shoe))
+    const ShoeAdd = (shoes) => {
+        store.dispatch(addShoe(shoes))
     }
+    // useEffect(() => {
+    //     setShoes()
+    // }, [])
     return (
         <>
             <h2>Shoe List</h2>
 
             {shoes.map(shoe => 
-                <div>
+                <div className='shoeBox'>
                     <img src={shoe.image} alt='shoes'></img>
                     <div>{shoe.name}</div>
                     <div>{shoe.price}</div>

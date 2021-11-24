@@ -6,6 +6,7 @@ const CartHome = () => {
     
     useEffect(() => {
         store.subscribe(() => {
+            console.log(store.getState().shoeCart);
             setShoes(store.getState().shoeCart)
         })
     }, [])
