@@ -1,2 +1,2 @@
 export const ADD_SHOE = 'ADD_SHOE';
-export const DELETE_SHOE= 'DELETE_SHOE';
+export const LOG_IN = 'LOG_IN';

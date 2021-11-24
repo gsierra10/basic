@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import store from '../../services/stateManager/store'
+import store from '../../services/store'
 
 const CartHome = () => {
     const [shoes, setShoes] = useState([])

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import store from "../../services/store"
-import { ADD_SHOE, DELETE_SHOE } from "../../services/actions"
+import { ADD_SHOE } from "../../services/actions"
 
 const ShoesHome = () => {
     const [shoes, setShoes] = useState([])
@@ -10,12 +10,12 @@ const ShoesHome = () => {
             payload: shoe
         }
     }
-    const ShoeAdd = (product) => {
-        store.dispatch(addShoe(product))
+    const ShoeAdd = (shoe) => {
+        store.dispatch(addShoe(shoe))
     }
     return (
         <>
-            <h2>Listado de productos</h2>
+            <h2>Shoe List</h2>
 
             {shoes.map(shoe => 
                 <div>
